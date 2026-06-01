@@ -1,31 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap'); /* fonte DM Sans do Google Fonts */
-
 * {
   box-sizing: border-box; /* o padding não aumenta o tamanho do elemento */
   margin: 0; 
   padding: 0;
 }
- 
- 
-/* ------------------------------------------------
-   CORPO DA PÁGINA
------------------------------------------------- */
+/* CORPO DA PÁGINA*/
 body {
   font-family: 'DM Sans', sans-serif; /* fonte principal */
   color: #1a3d2b;                     /* cor do texto: verde escuro */
   background: #fff;                   /* fundo branco */
   line-height: 1.7;                   /* espaço entre as linhas do texto */
 }
- 
 /* aq é pra tirar o sublinhado dos links e herdar a cor do pai(nav) */
 a { text-decoration: none; color: inherit; }
- 
 /* aq é pra n deixar as imagens vazar pra fora do container */
 img { max-width: 100%; display: block; }
- 
-/* -----------------------------------------------
-   A barra no topo com logo e links fica aq.
------------------------------------------------- */
+/* A barra no topo com logo e links fica aq.*/
 nav {
   display: flex;                    /* botar os itens lado a lado */
   align-items: center;              /* alinhae verticalmente ao centro */
@@ -34,14 +24,12 @@ nav {
   border-bottom: 1px solid #e0ebe3; /* linha fina embaixo da nav */
   position: sticky;                 /* fica grudada no topo ao scrollar */
   top: 0px;                          /* distância do topo para começar a grudar */
-  background: #fff;
+  background: #f4faf6;
   z-index: 100;                      /* fica acima dos outros elementos */
 }
- 
 /* aqui é pra ficar tudo alinhado no menu */
 .brand { display: flex; align-items: center; gap: 8px; font-weight: 500; }
 .logo-img { width: 32px; height: 32px; border-radius: 50%; }
- 
 /* links do menu */
 .nav-links { display: flex; gap: 0.5rem; }
 .nav-link {
@@ -64,13 +52,13 @@ main {
    Cada filho ocupa 1 parte igual do espaço.
 */
 .hero {
-  display: flex;        /* coloca os 3 blocos lado a lado */
+  display: flex;   /* coloca os 3 blocos lado a lado */
   align-items: center;
   gap: 48px;
   padding: 128px 0;
 }
-/* Imagem (botei pra ocupar 1 terço da tela mais ou menos */
-.hero-img { flex: 1.8; } /* a imagem tem um pouco mais de espaço que o texto e o botão (1.8) */
+/* Imagem (botei pra ocupar 3/5 da tela mais ou menos */
+.hero-img { flex: 2.5; } /* a imagem tem um pouco mais de espaço que o texto e o botão (1.8) */
 .hero-img img {
   border-radius: 12px; /* cantos arredondados */
   width: 100%; /* a imagem ocupa toda a largura do container */
