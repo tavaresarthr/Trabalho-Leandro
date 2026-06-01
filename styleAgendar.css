@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap'); /* fonte DM Sans do Google Fonts */
+* { box-sizing: border-box; margin: 0; padding: 0; } /* o padding não aumenta o tamanho do elemento */
+body { 
+  font-family: 'DM Sans', sans-serif;
+  color: #1a3d2b;
+  background: #fff;
+  line-height: 1.7; /* espaço entre as linhas do texto */
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+nav { /* barra no topo com logo e links fica aq. */
+  display: flex; /* coloca os itens lado a lado */
+  align-items: center; /* alinhar verticalmente ao centro */
+  justify-content: space-between;  /* logo fica esquerda e os links na direita */
+  padding: 19px 32px; /* espaço interno: cima/baixo | lados */
+  border-bottom: 1px solid #e0ebe3; /* linha fina embaixo da nav */
+  position: sticky; /* fica grudada no topo ao scrollar */
+  top: 0; /* distância do topo para começar a grudar */
+  background: #f4faf6; /* fundo branco */
+  z-index: 100; /* fica acima dos outros elementos */
+}
+.brand { display: flex; align-items: center; gap: 8px; font-weight: 500; } /* aqui é pra ficar tudo alinhado no menu */
+.logo-img { width: 32px; height: 32px; border-radius: 50%; } /* logo redonda */
+.nav-links { display: flex; gap: 4px; } /* links do menu */
+.nav-link { padding: 6px 14px; border-radius: 6px; font-size: 14px; color: #3a5a44; } /* estilo dos links do menu */
+.nav-link:hover { background: #e8f5ec; } /* fundo suave ao passar o mouse */
+/* ÁREA PRINCIPAL(main) container pra centralizar e limitar a largura dos elementos principais do site */
+main {
+  max-width: 680px;  /* formulário mais estreito, fica mais elegante */
+  margin: 0 auto; /* centraliza horizontalmente */
+  padding: 80px 32px 120px; /* espaço grande no topo, médio nas laterais e grande embaixo */
+}
+main h1 { /* título principal da página */
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+main > p { /* texto logo abaixo do título */
+  font-size: 15px;
+  color: #5a7a64;
+  margin-bottom: 56px;
+}
+/* seção de contato com formulário */
+form h2 { /* títulos das seções do formulário */
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #4a9b68;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0ebe3;
+  margin-bottom: 24px;
+  margin-top: 48px;       /* espaço entre os blocos do form */
+}
+form h2:first-child { margin-top: 0; } /* remove o espaço extra antes do primeiro título */
+label {
+  display: block;  /* cada label em sua própria linha */
+  font-size: 13px;
+  font-weight: 500;
+  color: #2e5a3a;
+  margin-bottom: 6px;
+  margin-top: 20px;
+}
+/* estilo base para inputs, selects e textarea */
+input, select, textarea { /* estilo base para inputs, selects e textarea */
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #1a3d2b;
+  background: #f4faf6;
+  border: 1px solid #daeade;
+  border-radius: 8px;
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+/* borda verde ao clicar no campo */
+input:focus, select:focus, textarea:focus {
+  border-color: #4a9b68;
+  background: #fff;
+}
+select { cursor: pointer; }/* cursor de mãozinha para indicar que é clicável */
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+button[type="submit"] { /* estilo do botão de envio do formulário */
+  width: 100%;
+  padding: 16px;
+  background: #2e6b47;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: background 0.2s; /* transição suave para a mudança de cor ao passar o mouse */
+}
+button[type="submit"]:hover { background: #1a3d2b; } /* cor mais escura ao passar o mouse */
+footer { /* rodapé com fundo escuro e texto claro */
+  background: #1a3d2b;
+  color: rgba(255,255,255,0.7);
+  padding: 48px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+ 
+footer p { font-size: 14px; }
+footer a { color: rgba(255,255,255,0.8); font-size: 14px; margin-left: 24px; }
+footer a:hover { color: #fff; }
+ 
