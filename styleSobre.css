@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap'); /* fonte DM Sans do Google Fonts */
+* { box-sizing: border-box; margin: 0; padding: 0; } /* o padding não aumenta o tamanho do elemento */
+body {
+  font-family: 'DM Sans', sans-serif; /* fonte principal */
+  color: #1a3d2b;
+  background: #fff;
+  line-height: 1.7;
+}
+a { text-decoration: none; color: inherit; } /* aq é pra tirar o sublinhado dos links e herdar a cor do pai(nav) */
+img { max-width: 100%; display: block; } /* aq é pra n deixar as imagens vazar pra fora do container */
+ /* A barra no topo com logo e links fica aq. */
+nav {
+  display: flex;/* coloca os itens lado a lado */
+  align-items: center; /* alinhae verticalmente ao centro */
+  justify-content: space-between;/* logo fica esquerda e os links na direita */
+  padding: 19px 32px; /* espaço interno: cima/baixo | lados */
+  border-bottom: 1px solid #e0ebe3; /* linha fina embaixo da nav */
+  position: sticky; /* fica grudada no topo ao scrollar */
+  top: 0; /* distância do topo para começar a grudar */
+  background: #f4faf6;/* fundo branco */
+  z-index: 100; /* fica acima dos outros elementos */
+}
+.brand { display: flex; align-items: center; gap: 8px; font-weight: 500; }/* aqui é pra ficar tudo alinhado no menu */
+.logo-img { width: 32px; height: 32px; border-radius: 50%; } /* logo redonda */
+.nav-links { display: flex; gap: 4px; } /* links do menu */
+.nav-link { padding: 6px 14px; border-radius: 6px; font-size: 14px; color: #3a5a44; }/* estilo dos links do menu */
+.nav-link:hover { background: #e3f2e7; } /* fundo suave ao passar o mouse */
+main { /* ÁREA PRINCIPAL(main) container pra centralizar e limitar a largura dos elementos principais do site */
+  max-width: 1000px;/* largura máxima */
+  margin: 0 auto;/* centraliza horizontalmente */
+  padding: 0 32px;/* espaço nas laterais */
+}
+.secao { /* seção de conteúdo com imagem e texto */
+  display: flex;         /* imagem e texto lado a lado */
+  align-items: center;
+  gap: 64px; /* espaço entre imagem e texto */
+  padding: 100px 0;      /* espaço grande entre as seções */
+  border-bottom: 1px solid #e0ebe3;
+}
+/* remove a linha da última seção */
+.secao:last-child { border-bottom: none; } /* remove a linha da última seção */
+/* imagem ocupa metade do espaço */
+.secao img {
+  width: 50%;
+  height: 360px;
+  object-fit: cover;     /* recorta sem distorcer */
+  border-radius: 12px;
+  flex-shrink: 0;        /* impede a imagem de encolher */
+}
+/* texto ocupa a outra metade */
+.secao div { flex: 1; } 
+.secao h2 { /* título da seção */
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.secao p { /* texto da seção */
+  font-size: 15px;
+  color: #5a7a64;
+  font-weight: 300;
+}
+footer {/* rodapé com fundo escuro e texto claro */
+  background: #1a3d2b;
+  color: rgba(255,255,255,0.7);
+  padding: 48px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;/* alinha verticalmente */
+  flex-wrap: wrap;/* permite quebrar em várias linhas em telas menores */
+  gap: 16px;
+}
+footer p { font-size: 14px; }
+footer a { color: rgba(255,255,255,0.8); font-size: 14px; margin-left: 24px; }
+footer a:hover { color: #fff; }
