@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap'); /* fonte DM Sans do Google Fonts */
+
+* {
+  box-sizing: border-box; /* o padding não aumenta o tamanho do elemento */
+  margin: 0; 
+  padding: 0;
+}
+ 
+ 
+/* ------------------------------------------------
+   CORPO DA PÁGINA
+------------------------------------------------ */
+body {
+  font-family: 'DM Sans', sans-serif; /* fonte principal */
+  color: #1a3d2b;                     /* cor do texto: verde escuro */
+  background: #fff;                   /* fundo branco */
+  line-height: 1.7;                   /* espaço entre as linhas do texto */
+}
+ 
+/* aq é pra tirar o sublinhado dos links e herdar a cor do pai(nav) */
+a { text-decoration: none; color: inherit; }
+ 
+/* aq é pra n deixar as imagens vazar pra fora do container */
+img { max-width: 100%; display: block; }
+ 
+/* -----------------------------------------------
+   A barra no topo com logo e links fica aq.
+------------------------------------------------ */
+nav {
+  display: flex;                    /* botar os itens lado a lado */
+  align-items: center;              /* alinhae verticalmente ao centro */
+  justify-content: space-between;   /* logo fica esquerda e os links na direita */
+  padding: 19px 32px;             /* espaço interno: cima/baixo | lados */
+  border-bottom: 1px solid #e0ebe3; /* linha fina embaixo da nav */
+  position: sticky;                 /* fica grudada no topo ao scrollar */
+  top: 0px;                          /* distância do topo para começar a grudar */
+  background: #fff;
+  z-index: 100;                      /* fica acima dos outros elementos */
+}
+ 
+/* aqui é pra ficar tudo alinhado no menu */
+.brand { display: flex; align-items: center; gap: 8px; font-weight: 500; }
+.logo-img { width: 32px; height: 32px; border-radius: 50%; }
+ 
+/* links do menu */
+.nav-links { display: flex; gap: 0.5rem; }
+.nav-link {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #3a5a44;
+}
+.nav-link:hover { background: #e8f5ec; } /* fundo suave ao passar o mouse */
+/* ÁREA PRINCIPAL (main)
+ container pra centralizar e limitar a largura dos elementos principais do site
+*/
+main {
+  max-width: 1000px;  /* largura máxima */
+  margin: 0 auto;     /* centraliza horizontalmente */
+  padding: 3px;    /* espaço nas laterais */
+}
+/*primeira sessão do hero
+   Ordem horizontal: imagem → texto → botão
+   Cada filho ocupa 1 parte igual do espaço.
+*/
+.hero {
+  display: flex;        /* coloca os 3 blocos lado a lado */
+  align-items: center;
+  gap: 48px;
+  padding: 128px 0;
+}
+/* Imagem (botei pra ocupar 1 terço da tela mais ou menos */
+.hero-img { flex: 1.8; } /* a imagem tem um pouco mais de espaço que o texto e o botão (1.8) */
+.hero-img img {
+  border-radius: 12px; /* cantos arredondados */
+  width: 100%; /* a imagem ocupa toda a largura do container */
+  max-height: 480px; /* altura máxima pra evitar que fique muito grande */
+  object-fit: cover; /* a imagem preenche o espaço sem distorcer, cortando o excesso se necessário */
+}
+/* Texto — ocupa 1 terço */
+.hero-text { flex: 1; }
+.hero-text h1 { font-size: 2.5rem; margin-bottom: 1rem; }/* cor verde escuro para o título */
+.hero-text p  { color: #5a7a64; }
+/* Botão — ocupa 1 terço, centralizado */
+.hero-btn {
+  flex: 1;/* o botão ocupa o mesmo espaço que o texto */
+  display: flex;/* para centralizar o botão dentro do seu espaço */
+  justify-content: center; /* centraliza horizontalmente */
+}
+.hero-btn a {
+  background: #2e6b47; 
+  color: #fff;
+  padding: 14px 29px;
+  border-radius: 6px;
+  font-size: 15px;
+  white-space: nowrap; /* evita que o texto quebre em várias linhas */
+}
+.hero-btn a:hover { background: #1a3d2b; } /* cor mais escura ao passar o mouse */
+/*  COMO TRABALHAMOS
+   Título da seção + 3 cards lado a lado. */
+main > h2 { /* título "Como Trabalhamos" */
+font-size: 26px;
+margin: 80px 0 32px; /* espaço acima e abaixo do título */
+}
+#processos { /* container dos 3 cards */
+  display: grid; /* coloca os cards em grade */
+grid-template-columns: repeat(3, 1fr); /* 3 colunas de largura igual */
+gap: 32px; /* espaço entre os cards */
+padding-bottom: 96px; /* espaço abaixo dos cards para separar da próxima seção */
+}
+
+#processos > div { /* cada card individual */
+background: #f4faf6;
+border-radius: 10px;
+padding: 40px;
+border: 1px solid #daeade; 
+}
+#processos h3 { color: #2e6b47; margin-bottom: 13px; } /* cor verde escuro para os títulos dos cards */
+#processos p  { font-size: 14px; color: #5a7a64; } 
+/*   NOSSOS SERVIÇOS
+   Fundo esverdeado com 4 cards em grade 2x2.*/
+section {
+  background: #f4faf6; 
+  border-radius: 12px; /* cantos arredondados */
+  padding: 64px; /* espaço interno da seção */
+  margin-bottom: 96px; /* espaço abaixo da seção */
+} 
+section h2 { font-size: 26px; margin-bottom: 40px; } 
+/* Grade 2 colunas para os 4 serviços */
+section > div { /* container dos cards de serviço */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas de largura igual */
+  gap: 32px; /* espaço entre os cards */
+} 
+/* Cada card de serviço */
+section > div > div { /* cada card individual */
+  background: #fff; 
+  border-radius: 8px; 
+  padding: 32px; 
+  border-left: 3px solid #4a9b68; /* detalhe verde na borda esquerda */
+}
+section h3 { margin-bottom: 10px; } 
+section p  { font-size: 14px; color: #5a7a64; }
+/*  Rodapé com fundo verde escuro com copyright e links.*/
+footer { /* container do rodapé */
+  background: #1a3d2b;
+  color: rgba(255,255,255,0.7);
+  padding: 48px 32px;
+  display: flex; /* para alinhar o texto e os links lado a lado */
+  justify-content: space-between; /* texto à esquerda e links à direita */
+  align-items: center; /* alinha verticalmente ao centro */
+  flex-wrap: wrap; /* permite que os itens quebrem para a próxima linha em telas menores */
+  gap: 16px; /* espaço entre os itens quando quebrarem para a próxima linha */
+}
+footer a {
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  margin-left: 24px; /* espaço entre cada link */
+}
+footer a:hover { color: #fff; } /* cor branca ao passar o mouse */
